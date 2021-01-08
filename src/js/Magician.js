@@ -2,14 +2,14 @@
 /* eslint-disable consistent-return */
 export default class Magician {
   constructor(attack) {
-    this.attack = attack;
+    this.startAttack = attack;
     this._attack = attack;
     this._stonedAttack = attack;
   }
 
   set attack(distance) {
     if (distance[0] !== 1) {
-      this._attack -= this._attack * distance[1];
+      this._attack -= this.startAttack * distance[1];
     }
   }
 
@@ -27,8 +27,11 @@ export default class Magician {
 }
 
 const mishka = new Magician(100);
-console.log(mishka);
-console.log(mishka.attack = [2, 0.1]);
+
+mishka.attack = [2, 0.1];
+
 console.log(mishka.attack);
-console.log(mishka.stoned = [2, 0.1]);
+
+mishka.stoned = [2, 0.1];
+
 console.log(mishka.stoned);
