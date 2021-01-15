@@ -1,8 +1,3 @@
-/* eslint-disable no-useless-constructor */
-import Magician from './Magician';
+import MageCharacter from './mageCharacter';
 
-export default class Daemon extends Magician {
-  constructor() {
-    super(100);
-  }
-}
+export default class Daemon extends MageCharacter {}
